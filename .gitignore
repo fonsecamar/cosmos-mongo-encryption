@@ -1,0 +1,6 @@
+java/local.settings.json
+java/target/*
+dotnet/local.settings.json
+dotnet/bin/*
+dotnet/obj/*
+.vs/
