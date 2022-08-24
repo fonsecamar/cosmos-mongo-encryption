@@ -1,5 +1,6 @@
 java/local.settings.json
 java/target/*
+java/.vscode/*
 dotnet/local.settings.json
 dotnet/bin/*
 dotnet/obj/*
