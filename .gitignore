@@ -3,4 +3,6 @@ java/target/*
 dotnet/local.settings.json
 dotnet/bin/*
 dotnet/obj/*
-.vs/
+.vscode/*
+dotnet/.vscode/*
+dotnet/.vs/*
