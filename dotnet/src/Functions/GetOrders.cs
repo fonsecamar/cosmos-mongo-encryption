@@ -13,7 +13,9 @@ namespace MongoEncryption.Functions
     {
         [FunctionName("GetOrders")]
         public static async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "get", Route = "orders")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, 
+            "get", 
+            Route = "orders")] HttpRequest req,
             ILogger log)
         {
             try
@@ -24,6 +26,7 @@ namespace MongoEncryption.Functions
                 if (req.Query.ContainsKey("autoDecrypt"))
                     autoDecrypt = bool.Parse(req.Query["autoDecrypt"]);
 
+                //If filtered by customerName (encrypted) requires client encryption
                 if (req.Query.ContainsKey("customerName"))
                     result = await Order.FindOrderAsync("customerName", req.Query["customerName"].ToString(), true, autoDecrypt);
                 else if (req.Query.ContainsKey("customerId"))

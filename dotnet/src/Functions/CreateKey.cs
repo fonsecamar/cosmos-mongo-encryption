@@ -13,7 +13,9 @@ namespace MongoEncryption.Functions
     {
         [FunctionName("CreateKey")]
         public static async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "createkey/{keyName}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, 
+            "put", 
+            Route = "createkey/{keyName}")] HttpRequest req,
             string keyName,
             ILogger log)
         {

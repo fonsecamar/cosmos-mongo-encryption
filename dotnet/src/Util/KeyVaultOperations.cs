@@ -7,6 +7,7 @@ namespace MongoEncryption.Util
 {
     internal static class KeyVaultOperations
     {
+        //Create RSA Key on Key Vault
         public static async Task<string> CreateKeyAsync(string vaultEndpoint, string keyName)
         {
             var kvClient = new KeyClient(vaultUri: new Uri($"https://{vaultEndpoint}"), credential: new DefaultAzureCredential());
@@ -21,6 +22,7 @@ namespace MongoEncryption.Util
             return newKey.Value.Properties.Version;
         }
 
+        //Rotate RSA Key on Key Vault.
         public static async Task<string> RotateKeyAsync(string vaultEndpoint, string keyName)
         {
             var kvClient = new KeyClient(vaultUri: new Uri($"https://{vaultEndpoint}"), credential: new DefaultAzureCredential());

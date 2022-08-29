@@ -14,7 +14,9 @@ namespace MongoEncryption.Functions
     {
         [FunctionName("CreateOrder")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "post", Route = "orders/create")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, 
+            "post", 
+            Route = "orders/create")] HttpRequest req,
             ILogger log)
         {
             try

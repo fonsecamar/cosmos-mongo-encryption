@@ -8,6 +8,7 @@ import com.azure.security.keyvault.keys.models.KeyVaultKey;
 
 public class KeyVaultOperations {
 
+    //Create RSA Key on Key Vault
     public static String CreateKey(String vaultEndpoint, String keyName)
     {
         var kvClient = new KeyClientBuilder()
@@ -24,6 +25,7 @@ public class KeyVaultOperations {
         return newKey.getProperties().getVersion();
     }
 
+    //Rotate RSA Key on Key Vault. New version is created if a key already exists.
     public static String RotateKey(String vaultEndpoint, String keyName)
     {
         return CreateKey(vaultEndpoint, keyName);

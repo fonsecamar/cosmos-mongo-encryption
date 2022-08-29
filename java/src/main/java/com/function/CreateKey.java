@@ -1,5 +1,7 @@
 package com.function;
 
+import java.util.Optional;
+
 import com.function.util.MongoCrypt;
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;
@@ -10,8 +12,6 @@ import com.microsoft.azure.functions.annotation.AuthorizationLevel;
 import com.microsoft.azure.functions.annotation.BindingName;
 import com.microsoft.azure.functions.annotation.FunctionName;
 import com.microsoft.azure.functions.annotation.HttpTrigger;
-
-import java.util.Optional;
 
 public class CreateKey {
     @FunctionName("CreateKey")

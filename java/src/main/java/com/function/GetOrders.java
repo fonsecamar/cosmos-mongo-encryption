@@ -1,9 +1,17 @@
 package com.function;
 
-import java.util.*;
-import com.microsoft.azure.functions.annotation.*;
-import com.function.util.*;
-import com.microsoft.azure.functions.*;
+import java.util.List;
+import java.util.Optional;
+
+import com.function.util.Order;
+import com.microsoft.azure.functions.ExecutionContext;
+import com.microsoft.azure.functions.HttpMethod;
+import com.microsoft.azure.functions.HttpRequestMessage;
+import com.microsoft.azure.functions.HttpResponseMessage;
+import com.microsoft.azure.functions.HttpStatus;
+import com.microsoft.azure.functions.annotation.AuthorizationLevel;
+import com.microsoft.azure.functions.annotation.FunctionName;
+import com.microsoft.azure.functions.annotation.HttpTrigger;
 
 public class GetOrders {
 
@@ -21,6 +29,7 @@ public class GetOrders {
             List<Object> result = null;
             final Boolean autoDecrypt = Boolean.parseBoolean(request.getQueryParameters().get("autoDecrypt"));
 
+            //If filtered by customerName (encrypted) requires client encryption
             if (request.getQueryParameters().containsKey("customerName"))
                 result = Order.FindOrder("customerName", request.getQueryParameters().get("customerName"), true, autoDecrypt);
             else if (request.getQueryParameters().containsKey("customerId"))

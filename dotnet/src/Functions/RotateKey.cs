@@ -13,7 +13,9 @@ namespace MongoEncryption.Functions
     {
         [FunctionName("RotateKey")]
         public static async Task<IActionResult> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "put", Route = "rotatekey/{keyName}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, 
+            "put", 
+            Route = "rotatekey/{keyName}")] HttpRequest req,
             string keyName,
             ILogger log)
         {
