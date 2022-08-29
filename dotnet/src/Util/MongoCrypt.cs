@@ -25,7 +25,7 @@ namespace MongoEncryption.Util
             _clientConnectionString = connectionString;
             _keyName = keyName;
 
-            var vaultConnectionString = Environment.GetEnvironmentVariable("mongoVaultConnection");
+            var vaultConnectionString = Environment.GetEnvironmentVariable("mongoVaultConnectionString");
             _vaultNamespace = CollectionNamespace.FromFullName(Environment.GetEnvironmentVariable("mongoVaultNamespace"));
             _vaultEndpoint = Environment.GetEnvironmentVariable("vaultEndpoint");
 

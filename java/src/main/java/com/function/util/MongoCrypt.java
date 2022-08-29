@@ -39,7 +39,7 @@ public class MongoCrypt {
         _clientConnectionString = connectionString;
         _keyName = keyName;
 
-        var vaultConnectionString = System.getenv("mongoVaultConnection");
+        var vaultConnectionString = System.getenv("mongoVaultConnectionString");
         _vaultNamespace = System.getenv("mongoVaultNamespace"); //database.collection used to store key references
         _vaultEndpoint = System.getenv("vaultEndpoint");
 
