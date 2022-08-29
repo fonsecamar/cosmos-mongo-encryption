@@ -34,7 +34,9 @@ This repository provides a code sample in .NET and Java on how to use MongoDB Cl
         * **mongoOrderConnectionString**: Primary Connection String of your Cosmos DB Mongo API (<a href="https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/connect-mongodb-account#get-the-mongodb-connection-string-to-customize" target="_blank">Get MongoDB connection string</a>).
         * **mongoVaultConnectionString**: Same value as **mongoOrderConnectionString**.
 
-* <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/how-to-create-container-mongodb#portal-mongodb" target="_blank">Create a database and collections.</a> Create 2 collections (`orders and keys`). Choose `Unlimited` **Storage capacity** and provide `customerId` as the **Shard key**.
+* <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/how-to-create-container-mongodb#portal-mongodb" target="_blank">Create a database and collections.</a>
+    * Create `orders` collection: select `Sharded`, provide `customerId` as the **Shard key**, select `Autoscale` and provide `1000` as **Collection Max RU/s**.
+    * Create `keys` collection: select `Unsharded`, select `Autoscale` and provide `1000` as **Collection Max RU/s**.
 
 * <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-how-to-use-azure-function-app-settings?tabs=portal" target="_blank">Configure application settings</a>
     * collectionName: `orders`
@@ -46,7 +48,7 @@ This repository provides a code sample in .NET and Java on how to use MongoDB Cl
     * mongoVaultConnectionString: `@Microsoft.KeyVault(VaultName=<key vault name>;SecretName=mongoVaultConnectionString)`
     * mongoVaultNamespace: `<database name>.keys`
     * orderKeyName: `OrdersCMK`
-    * vaultEndpoint: `<key vault name>.vault.azure.net` (do not include htts://)
+    * vaultEndpoint: `<key vault name>.vault.azure.net` (do not include https://)
 
 * Deploy Function application to Azure (<a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code" target="_blank">Deploy using VS Code</a>).
 
