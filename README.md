@@ -4,7 +4,7 @@
 
 This repository provides a code sample in .NET and Java on how to use MongoDB Client-Side Field Level Encryption with Azure Cosmos DB Mongo API 4.2 (<a href="https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42#client-side-field-level-encryption" target="_blank">Supported features for version 4.2</a>).
 
-### 1. Requirements
+## Requirements
 
 > It's recommended to create all the resources within the same region.
 
@@ -18,7 +18,7 @@ This repository provides a code sample in .NET and Java on how to use MongoDB Cl
 
 * <a href="https://github.com/fonsecamar/cosmos-mongo-encryption.git" target="_blank">Clone this repository.</a>
 
-### 2. Configuration
+## Configuration
 
 * <a href="https://docs.microsoft.com/en-us/azure/app-service/overview-managed-identity?tabs=portal%2Chttp#add-a-system-assigned-identity" target="_blank">Enable system-assigned idenity on your Function App.</a>
 
@@ -50,7 +50,7 @@ This repository provides a code sample in .NET and Java on how to use MongoDB Cl
 
 * Deploy Function application to Azure (<a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code" target="_blank">Deploy using VS Code</a>).
 
-### 3. Running the sample
+## Running the sample
 
 You can call Function APIs from Azure Portal or your favorite tool.
 
@@ -110,5 +110,5 @@ You can call Function APIs from Azure Portal or your favorite tool.
     curl --request GET 'https://<function app name>.azurewebsites.net/api/orders?code=<function code>&customerName=John Doe&autoDecrypt=false'
     ```
 
-### 4. Execution statistics
+## Execution statistics
 
