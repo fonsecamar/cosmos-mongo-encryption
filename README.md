@@ -62,6 +62,15 @@ You can call Function APIs from Azure Portal or your favorite tool.
     curl --request PUT 'https://<function app name>.azurewebsites.net/api/createkey/OrdersCMK?code=<function code>'
     ```
 1. Check Key Vault Key and keys collection on Cosmos
+    
+    Cosmos DB key reference
+
+    ![Cosmos Key v1](./images/Cosmos-Key-v1.jpg)
+
+    Key Vault key reference
+
+    ![KeyVault Key v1](./images/KeyVault-Key-v1.jpg)
+
 1. Call CreateOrder function
 
     ```
@@ -96,6 +105,15 @@ You can call Function APIs from Azure Portal or your favorite tool.
     curl --request PUT 'https://<function app name>.azurewebsites.net/api/rotatekey/OrdersCMK?code=<function code>'
     ```
 1. Check new version of Key Vault Key and keys collection on Cosmos
+    
+    Cosmos DB key reference (new version)
+
+    ![Cosmos Key v2](./images/Cosmos-Key-v2.jpg)
+
+    Key Vault key reference (new version)
+
+    ![KeyVault Key v2](./images/KeyVault-Key-v2.jpg)
+
 1. Call GetOrders function with different autoDecrypt values
 
     ```
