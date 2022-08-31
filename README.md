@@ -140,7 +140,9 @@ Load testing tool: <a href="https://docs.microsoft.com/en-us/azure/load-testing/
 Test Environment:
 
 Function -> Elastic Premium Plan EP1 (1 vCore)
-Cosmos DB Mongo API-> Auto scale 20,000 RU/s Max  
+Cosmos DB Mongo API:
+    Orders collection: Auto scale 20,000 RU/s Max
+    Keys collection  : Auto scale 4,000 RU/s Max
 ```
 
 ### Scenario 1: 100 simultaneous requests
@@ -166,3 +168,29 @@ Cosmos DB Mongo API-> Auto scale 20,000 RU/s Max
 1. Key Vault hits
 
    ![Key Vault Create 100rps](./images/keyvault_create_100rps.jpg)
+
+<br/>
+
+### Scenario 2: 250 simultaneous requests
+
+**Create order API**
+
+1. Function execution
+
+   ![Function Create 250rps](./images/function_create_250rps.jpg)
+
+1. Load Test statistics
+
+   ![Load Test Create 250rps](./images/loadtest_create_250rps.jpg)
+
+1. Cosmos `keys` collections queries per minute
+
+   ![Cosmos Queries Create 250rps](./images/cosmos_queries_create_250rps.jpg)
+
+1. Cosmos `keys` collections Request Charge per minute
+
+   ![Cosmos Request Charge Create 250rps](./images/cosmos_request_charge_create_250rps.jpg)
+
+1. Key Vault hits
+
+   ![Key Vault Create 250rps](./images/keyvault_create_250rps.jpg)
