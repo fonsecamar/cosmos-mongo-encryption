@@ -132,3 +132,34 @@ You can call Function APIs from Azure Portal or your favorite tool.
 
 ## Execution statistics
 
+Since `keys` collection and Key Vault are accessed based on the workload, below we have some load test statistics to help sizing correctly your collection and perhaps cost estimation.
+
+Load testing tool: <a href="https://docs.microsoft.com/en-us/azure/load-testing/">Azure Load Testing</a>
+
+> Function Plan: Elastic Premium EP1 (1 vCore)
+
+> Cosmos: Auto scale 20,000 RU/s Max  
+
+### Scenario 1: 100 simultaneous requests
+
+Create order API
+
+Function execution
+
+   ![Function Create 100rps](./images/function_create_100rps.jpg)
+
+Load Test statistics
+
+   ![Load Test Create 100rps](./images/loadtest_create_100rps.jpg)
+
+Cosmos `keys` collections queries per minute
+
+   ![Cosmos Queries Create 100rps](./images/cosmos_queries_create_100rps.jpg)
+
+Cosmos `keys` collections Request Charge per minute
+
+   ![Cosmos Request Charge Create 100rps](./images/cosmos_request_charge_create_100rps.jpg)
+
+Key Vault hits
+
+   ![Key Vault Create 100rps](./images/keyvault_create_100rps.jpg)
