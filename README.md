@@ -2,7 +2,16 @@
 
 ## Introduction
 
-This repository provides a code sample in .NET and Java on how to use MongoDB Client-Side Field Level Encryption with Azure Cosmos DB Mongo API 4.2 (<a href="https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42#client-side-field-level-encryption" target="_blank">Supported features for version 4.2</a>).
+This repository provides a code sample in .NET and Java on how to use MongoDB Client-Side Field Level Encryption with Azure Cosmos DB Mongo API 4.2 ([Supported features for version 4.2](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb/feature-support-42#client-side-field-level-encryption)).
+
+### References
+
+1. [MongoDB Explict Encryption](https://www.mongodb.com/docs/manual/core/csfle/fundamentals/manual-encryption/)
+1. [MongoDB Automatic Decryption](https://www.mongodb.com/docs/manual/core/csfle/fundamentals/manual-encryption/#automatic-decryption)
+1. [MongoDB Encryption Key Management](https://www.mongodb.com/docs/manual/core/csfle/fundamentals/manage-keys/)
+1. [MongoDB Fields and Encryption Types](https://www.mongodb.com/docs/manual/core/csfle/fundamentals/encryption-algorithms/)
+1. [MongoDB Use Automatic Client-Side Field Level Encryption with Azure](https://www.mongodb.com/docs/manual/core/csfle/tutorials/azure/azure-automatic/#std-label-csfle-tutorial-automatic-azure)
+
 
 ## Requirements
 
@@ -134,7 +143,7 @@ You can call Function APIs from Azure Portal or your favorite tool.
 
 Since `keys` collection and Key Vault are accessed based on the workload, below we have some load test statistics to help sizing correctly your collection and perhaps cost estimation.
 
-Load testing tool: <a href="https://docs.microsoft.com/en-us/azure/load-testing/">Azure Load Testing</a>
+Load testing tool: <a href="https://docs.microsoft.com/en-us/azure/load-testing/" target="_blank">Azure Load Testing</a>
 
 ```
 Test Environment:
