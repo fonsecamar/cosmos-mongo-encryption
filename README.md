@@ -139,4 +139,4 @@ You can call Function APIs from Azure Portal or your favorite tool.
     curl --request GET 'https://<function app name>.azurewebsites.net/api/orders?code=<function code>&customerName=John Doe&autoDecrypt=false'
     ```
 
-## [View Execution statistics](ExecutionStatistics.md)
+### [View Execution statistics](ExecutionStatistics.md)
