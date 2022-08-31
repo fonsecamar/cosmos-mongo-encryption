@@ -140,3 +140,15 @@ You can call Function APIs from Azure Portal or your favorite tool.
     ```
 
 ### [View Execution statistics](ExecutionStatistics.md)
+
+<br/>
+
+# How to Contribute
+
+If you find any errors or have suggestions for changes, please be part of this project!
+
+1. Create your branch: `git checkout -b my-new-feature`
+2. Add your changes: `git add .`
+3. Commit your changes: `git commit -m '<message>'`
+4. Push your branch to Github: `git push origin my-new-feature`
+5. Create a new Pull Request 😄
