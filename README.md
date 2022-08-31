@@ -136,30 +136,33 @@ Since `keys` collection and Key Vault are accessed based on the workload, below 
 
 Load testing tool: <a href="https://docs.microsoft.com/en-us/azure/load-testing/">Azure Load Testing</a>
 
-> Function Plan: Elastic Premium EP1 (1 vCore)
+```
+Test Environment:
 
-> Cosmos: Auto scale 20,000 RU/s Max  
+Function -> Elastic Premium Plan EP1 (1 vCore)
+Cosmos DB Mongo API-> Auto scale 20,000 RU/s Max  
+```
 
 ### Scenario 1: 100 simultaneous requests
 
-Create order API
+**Create order API**
 
-Function execution
+1. Function execution
 
    ![Function Create 100rps](./images/function_create_100rps.jpg)
 
-Load Test statistics
+1. Load Test statistics
 
    ![Load Test Create 100rps](./images/loadtest_create_100rps.jpg)
 
-Cosmos `keys` collections queries per minute
+1. Cosmos `keys` collections queries per minute
 
    ![Cosmos Queries Create 100rps](./images/cosmos_queries_create_100rps.jpg)
 
-Cosmos `keys` collections Request Charge per minute
+1. Cosmos `keys` collections Request Charge per minute
 
    ![Cosmos Request Charge Create 100rps](./images/cosmos_request_charge_create_100rps.jpg)
 
-Key Vault hits
+1. Key Vault hits
 
    ![Key Vault Create 100rps](./images/keyvault_create_100rps.jpg)
